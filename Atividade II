@@ -40,11 +40,15 @@ int main(){
 		}
 	}
 	
-	mediaGeral = somaGeral /(float) numInseridos;
-	mediaPar = somaPar /(float) numPar;
-	mediaImpar = somaImpar /(float) numImpar;
-	   
-	//Resultados
+	if (numInseridos != 0){
+		mediaGeral = somaGeral /(float) numInseridos;	
+	}
+	if (numPar != 0){
+		mediaPar = somaPar /(float) numPar;	
+	}
+	if(numImpar != 0){
+		mediaImpar = somaImpar /(float) numImpar;	
+	}
 	
 	system("cls");
 	
@@ -60,12 +64,11 @@ int main(){
 	
 	printf("\nNúmeros na ordem inversa:\n");
 	for(contador = 4; contador >= 0; contador--){
-		printf("%i\n", numero[contador]);
+		printf("%i°: %i\n", contador+1, numero[contador]);
 	}
 	
 	printf("\n\n");
 	system("pause");
-	//a
 	
 	return 0;
 }
